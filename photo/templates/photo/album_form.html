@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}album_form.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>앨범/포토 등록 or 수정 폼</h1>
+
+    {% if form.is_multipart or formset.is_multipart %}
+    <form enctype="multipart/form-data" method="post" action=".">
+    {% else %}
+    <form method="post" action=".">
+    {% endif %}
+    {% csrf_token %}
+
+    {% if form.errors %}
+    <p class="errornote">잘못됬습니다! 아래 FORM 오류를 수정하십시오.</p>
+    {% endif %}
+    {% if formset.errors %}
+    <p class="errornote">잘못됬습니다! 아래 FORMSET 오류를 수정하십시오.</p>
+    {% endif %}
+
+
+    <h4>앨범 내용을 만들거나 업데이트하십시오.</h4>
+
+    <fieldset class="aligned">
+        <div class="form-row">
+            {{ form.name.label_tag }} {{ form.name }}
+        </div>
+        <div class="form-row">
+            {{ form.description.label_tag }} {{ form.description }}
+        </div>
+    </fieldset>
+
+    <h4>사진 콘텐츠 만들기 또는 업데이트.</h4>
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form.id }}
+    <fieldset class="aligned">
+        <div class="form-row">
+            {{ form.image.label_tag }} {{ form.image }}
+        </div>
+        <div class="form-row">
+            {{ form.title.label_tag }} {{ form.title }}
+        </div>
+        <div class="form-row">
+            {{ form.description.label_tag }} {{ form.description }}
+        </div>
+    </fieldset>
+    {% endfor %}
+
+    <div class="submit-row">
+        <button class = "btn btn-default"> 수정</button>
+    </div>
+
+    <script type="text/javascript">document.getElementById('id_name').focus();</script>
+
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}photo_form.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>사진 추가/업데이트 - {{user}}</h1>
+
+    {% if form.is_multipart %}
+    <form enctype="multipart/form-data" method="post" action=".">
+    {% else %}
+    <form method="post" action=".">
+    {% endif %}
+    {% csrf_token %}
+
+    {% if form.errors %}
+    <p class="errornote">잘못되었습니다! 아래 오류를 수정하십시오.</p>
+    {% endif %}
+
+    <p>사진의 작성 또는 업데이트 양식입니다.</p>
+
+    <fieldset class="aligned">
+
+        <div class="form-row">
+            {{ form.image.label_tag }} {{ form.image }}
+        </div>
+
+        <div class="form-row">
+            {{ form.album.label_tag }} {{ form.album }}
+            <button type="button"><a href="{% url 'photo:album_add' %}">앨범 추가</a></button>
+        </div>
+
+        <div class="form-row">
+            {{ form.title.label_tag }} {{ form.title }}
+        </div>
+
+        <div class="form-row">
+            {{ form.description.label_tag }} {{ form.description }}
+        </div>
+
+    </fieldset>
+
+    <div class="submit-row">
+        <input type="submit" value="Submit"/>
+    </div>
+
+    <script type="text/javascript">document.getElementById('id_album').focus();</script>
+
+    </form>
+
+</div>
+{% endblock %}

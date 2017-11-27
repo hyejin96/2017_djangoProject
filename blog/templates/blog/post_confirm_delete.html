@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}post_confirm_delete.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>게시글 삭제</h1>
+
+    <form action="" method="post">{% csrf_token %}
+        <p>당신은 "{{ object }}" 의 삭제를 정말 원합니까?? ?</p>
+        <input type="submit" value="Confirm" />
+    </form>
+
+</div>
+{% endblock %}

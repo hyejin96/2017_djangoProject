@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{%block content %}
+{% load static %}
+<title>Polls App</title>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<div class = "po">
+<h1><a href="#">투표게시판</h1>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li class = "qu"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>투표할 것이 없습니다.</p>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,180 @@
+body {
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* PAGE STRUCTURE */
+div#header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    display: table;
+    background: #6B774F;
+    color: white;
+
+
+}
+
+
+
+
+div#menu {
+    position: absolute;
+    /*top: 700px;*/
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 400px 0px;
+    background: #6B774F;
+    font-size: 12px;
+    z-index: 3000;
+
+
+}
+
+div#content {
+    position: absolute;
+    top:50px;
+    left: 20px;
+    right: 50px;
+    color: #6C6152;
+}
+
+div#content1 {
+    position: absolute;
+    top:70px;
+    left: 20px;
+    right: 50px;
+    color: #6C6152;
+}
+
+div#content3 {
+    position: absolute;
+    top:50px;
+    left: 20px;
+    right: 50px;
+    color: #6C6152;
+}
+
+div#content4 {
+    position: relative;
+    top:70px;
+    left: 20px;
+    right: 10px;
+    color: #6C6152;
+}
+
+div#footer {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    height: 30px;
+}
+
+/* HEADER */
+.maintitle {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.welcome {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+  color: #ffc;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+
+
+.welcome a:link, .welcome a:visited {
+    color: white;
+}
+
+/* MENU */
+div#menu a:link, div#menu a:visited {
+    color: #6C6152;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+div#menu > li {
+    display: table-cell;
+    vertical-align: middle;
+    /*border-right: 1px solid #bbb;*/
+    /*border-radius: 25px;*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    /*width: 20px;*/
+}
+/*div#menu > li:last-child {
+  border-right: 0;
+}*/
+/* pulldown menu */
+div#menu li  ul {
+    display:inline-block;
+    position:absolute;
+    list-style:none;
+    background: #8a9969;
+    z-index: 1;
+    opacity: 0;
+    text-align: center;
+    font-size: 6px;
+    /*width: 50px;*/
+}
+
+div#menu li:hover ul {
+    opacity: 1;
+}
+
+/* LINK */
+ /*#544A3D*/
+div#menu a:hover{
+   color: black;
+   font-weight: bold;
+   background-color: #5b6642;
+}
+
+#applist>a:link, a:visited {
+    color: #8B7A65;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #8B7A65;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    line-height: 18px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 5px 15px;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+table.change-list, table.change-list th, table.change-list td {
+    border: 1px solid #ccc;
+  }
+div h1{
+  font-weight: bold;
+}

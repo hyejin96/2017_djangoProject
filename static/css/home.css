@@ -1,0 +1,27 @@
+body {
+    background-image: url("{% static 'img/snow.png' %}"), url("{% static 'img/snow3.png' %}"), url("{% static 'img/snow2.png' %}");
+    -webkit-animation: snow 20s linear infinite;
+}
+
+div#content_home {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+}
+
+div#homeimg {
+    background: #FFF;
+    /*padding: 5px 0 1px 0;*/
+    text-align: center;
+}
+
+.ti {
+  position:  relative;
+  top:100px;
+}
+
+.cen{
+  left:30%;
+  position:absolute;
+}

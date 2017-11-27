@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}즐겨찾기 리스트{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h1>즐겨찾기 리스트</h1>
+
+    <ul>
+        {% for bookmark in object_list %}
+            <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
