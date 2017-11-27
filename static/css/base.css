@@ -102,7 +102,7 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #6C6152;
+    color: #fff;
     font-size: 15px;
     font-weight: bold;
 }
@@ -140,7 +140,7 @@ div#menu li:hover ul {
 /* LINK */
  /*#544A3D*/
 div#menu a:hover{
-   color: black;
+   color: #fff;
    font-weight: bold;
    background-color: #5b6642;
 }
