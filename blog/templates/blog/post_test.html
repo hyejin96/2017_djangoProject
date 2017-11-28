@@ -19,13 +19,13 @@
 <div>
     <span>
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">PreviousPage</a>
+            <a href="?page={{ page_obj.previous_page_number }}">이전페이지</a>
         {% endif %}
 
         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">NextPage</a>
+            <a href="?page={{ page_obj.next_page_number }}">다음페이지</a>
         {% endif %}
     </span>
 

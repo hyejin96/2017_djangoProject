@@ -1,8 +1,3 @@
-body {
-    background-image: url("{% static 'img/snow.png' %}"), url("{% static 'img/snow3.png' %}"), url("{% static 'img/snow2.png' %}");
-    -webkit-animation: snow 20s linear infinite;
-}
-
 div#content_home {
     position: absolute;
     top: 50px;

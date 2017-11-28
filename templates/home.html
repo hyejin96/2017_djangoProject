@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}home.html{% endblock %}
+{% block title %}5조{% endblock %}
 
 {% load staticfiles %}
 {% block extrastyle %}{% static "css/home.css" %}{% endblock %}
 
 {% block content %}
-
+<embed src = "{% static "sound/day.mp3" %}" autostart = "true" hidden = "true" loop="-1"/>
 <div id="content_home">
 
     <div id="homeimg">

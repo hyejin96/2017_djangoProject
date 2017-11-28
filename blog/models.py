@@ -42,4 +42,3 @@ class Post(models.Model):
         if not self.id:
             self.slug = slugify(self.title, allow_unicode=True)
         super(Post, self).save(*args, **kwargs)
-

@@ -28,7 +28,7 @@ div#menu {
     width: 100%;
     display: table;
     table-layout: fixed;
-    border-spacing: 400px 0px;
+    border-spacing: 115px 0px;
     background: #6B774F;
     font-size: 12px;
     z-index: 3000;
@@ -62,7 +62,7 @@ div#content3 {
 
 div#content4 {
     position: relative;
-    top:70px;
+    top:50px;
     left: 20px;
     right: 10px;
     color: #6C6152;
@@ -102,7 +102,7 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #6C6152;
+    color: white;
     font-size: 15px;
     font-weight: bold;
 }
@@ -140,7 +140,7 @@ div#menu li:hover ul {
 /* LINK */
  /*#544A3D*/
 div#menu a:hover{
-   color: black;
+   color: white;
    font-weight: bold;
    background-color: #5b6642;
 }

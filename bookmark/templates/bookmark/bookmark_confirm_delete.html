@@ -8,8 +8,8 @@
     <h1>즐겨찾기 삭제</h1>
 
     <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}" ?</p>
-        <input type="submit" value="Confirm" />
+        <p>당신은 정말로 "{{ object }}" 의 삭제를 원하십니까 ?</p>
+        <button class = "btn btn-default">예 </button>
     </form>
 
 </div>
