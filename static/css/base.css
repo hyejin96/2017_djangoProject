@@ -102,7 +102,11 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
+<<<<<<< HEAD
     color: white;
+=======
+    color: #fff;
+>>>>>>> f0699aa57f8fe95fdc27b8b775b1956996b94064
     font-size: 15px;
     font-weight: bold;
 }
@@ -140,7 +144,11 @@ div#menu li:hover ul {
 /* LINK */
  /*#544A3D*/
 div#menu a:hover{
+<<<<<<< HEAD
    color: white;
+=======
+   color: #fff;
+>>>>>>> f0699aa57f8fe95fdc27b8b775b1956996b94064
    font-weight: bold;
    background-color: #5b6642;
 }
@@ -151,7 +159,7 @@ div#menu a:hover{
 }
 
 a:link, a:visited {
-    color: #8B7A65;
+    color: #fff;
     text-decoration: none;
 }
 
