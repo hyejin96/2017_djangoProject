@@ -19,6 +19,9 @@ from bookmark.views import *
 
 urlpatterns = [
     url(r'^$', BookmarkLV.as_view(), name='index'),
+
+    url(r'^bookmark2/$', BookmarkLV2.as_view(), name='index2'),
+
     url(r'^(?P<pk>\d+)/$', BookmarkDV.as_view(), name='detail'),
 
     # Example: /add/

@@ -12,6 +12,10 @@ from mysite.views import LoginRequiredMixin
 class BookmarkLV(ListView):
     model = Bookmark
 
+class BookmarkLV2(ListView):
+        model = Bookmark
+        template_name = 'bookmark/bookmarkke.html'
+
 class BookmarkDV(DetailView):
     model = Bookmark
 
@@ -38,4 +42,3 @@ class BookmarkUpdateView(LoginRequiredMixin, UpdateView) :
 class BookmarkDeleteView(LoginRequiredMixin, DeleteView) :
     model = Bookmark
     success_url = reverse_lazy('bookmark:index')
-

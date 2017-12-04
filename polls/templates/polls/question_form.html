@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}polls_form.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>투표 추가/업데이트 - {{user}}</h1>
+
+    <form action="." method="post">{% csrf_token %}
+
+    {% if form.errors %}
+    <p class="errornote">아래의 잘못된 오류를 수정하세요!</p>
+    {% endif %}
+
+    <p>투표 작성 또는 업데이트 양식입니다.</p>
+
+    <fieldset class="aligned">
+
+        <div class="form-row">
+            {{ form.question_text.label_tag }} {{ form.question_text }}
+        </div>
+
+
+    </fieldset>
+
+
+    <div class="submit-row">
+            <button class = "btn btn-default">저장 </button>
+        </div>
+    <script type="text/javascript">document.getElementById('id_question_text').focus();</script>
+    </form>
+
+</div>
+{% endblock %}

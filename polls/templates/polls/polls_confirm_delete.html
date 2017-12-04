@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}polls_confirm_delete.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>투표 삭제</h1>
+
+    <form action="" method="post">{% csrf_token %}
+        <p>당신은 정말로 "{{ object }}" 의 삭제를 원하십니까 ?</p>
+        <button class = "btn btn-default">예 </button>
+    </form>
+
+</div>
+{% endblock %}

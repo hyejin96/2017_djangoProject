@@ -20,7 +20,10 @@ from blog.views import *
 urlpatterns = [
 
     # Example: /
+
     url(r'^$', PostLV.as_view(), name='index'),
+
+    url(r'^post2/$', PostLV2.as_view(), name='index2'),
 
     # Example: /post/ (same as /)
     url(r'^post/$', PostLV.as_view(), name='post_list'),

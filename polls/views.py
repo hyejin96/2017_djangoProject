@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from django.views.generic import ListView, DetailView
+from polls.models import Question
 
 from .models import Choice, Question
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -20,6 +22,8 @@ class IndexView(generic.ListView):
         published in the future).
         """
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
+
+
 
 class DetailView(generic.DetailView):
     model = Question
@@ -52,3 +56,27 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+class PollsCreateView(LoginRequiredMixin, CreateView):
+        model = Question
+        fields = ['question_text', 'pub_date']
+        success_url = reverse_lazy('polls:index')
+
+        def form_vaild(self, form):
+            form.instance.owner = self.request.user
+            return super(PollsCreateView, self).form_valid(form)
+
+class PollsChangeLV(LoginRequiredMixin, ListView):
+        template_name = 'polls/polls_change_list.html'
+
+        def get_queryset(self):
+            return Question.objects.filter(question_text  = self.request.user)
+
+class PollsUpdateView(LoginRequiredMixin, UpdateView):
+        model = Question
+        fields = ['question_text', 'pub_date']
+        success_url = reverse_lazy('polls:index')
+
+class PollsDeleteView(LoginRequiredMixin, DeleteView):
+    model = Question
+    success_url = reverse_lazy('polls:index')

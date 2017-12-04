@@ -28,3 +28,5 @@ class LoginRequiredMixin(object):
         view = super(LoginRequiredMixin, cls).as_view(**initkwargs)
         return login_required(view)
 
+class MainView(TemplateView):
+    template_name = 'ghost.html'

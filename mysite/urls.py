@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-from mysite.views import HomeView
+from mysite.views import HomeView,MainView
 from mysite.views import UserCreateView, UserCreateDoneTV
 
 urlpatterns = [
@@ -28,7 +28,8 @@ urlpatterns = [
     url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
     url(r'^accounts/register/done/$', UserCreateDoneTV.as_view(), name='register_done'),
 
-    url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^$', MainView.as_view(), name = 'main'),
+    url(r'^main/', HomeView.as_view(), name='home'),
     url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^photo/', include('photo.urls', namespace='photo')),

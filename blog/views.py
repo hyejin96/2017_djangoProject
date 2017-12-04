@@ -28,6 +28,12 @@ class PostLV(ListView) :
     context_object_name = 'posts'
     paginate_by = 2
 
+class PostLV2(ListView) :
+        model = Post
+        template_name = 'blog/blogge.html'
+        context_object_name = 'posts'
+
+
 class TestPostLV(ListView) :
     #model = Post
     #queryset = Post.objects.all()[:5]

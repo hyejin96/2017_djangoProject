@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'photo.apps.PhotoConfig',
     'polls',
+    'db_test',
 ]
 
 DISQUS_WEBSITE_SHORTNAME = 'pythonwebprogramming'

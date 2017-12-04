@@ -11,12 +11,14 @@ div#header {
     height: 50px;
     width: 100%;
     display: table;
-    background: #6B774F;
+    background: #222222;
     color: white;
 
 
 }
-
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color: #002E09;
+}
 
 
 
@@ -29,7 +31,7 @@ div#menu {
     display: table;
     table-layout: fixed;
     border-spacing: 115px 0px;
-    background: #6B774F;
+    background: #002E09;
     font-size: 12px;
     z-index: 3000;
 
@@ -41,7 +43,7 @@ div#content {
     top:50px;
     left: 20px;
     right: 50px;
-    color: #6C6152;
+    color: #002E09;
 }
 
 div#content1 {
@@ -49,7 +51,7 @@ div#content1 {
     top:70px;
     left: 20px;
     right: 50px;
-    color: #6C6152;
+    color: #002E09;
 }
 
 div#content3 {
@@ -57,7 +59,7 @@ div#content3 {
     top:50px;
     left: 20px;
     right: 50px;
-    color: #6C6152;
+    color: #002E09;
 }
 
 div#content4 {
@@ -65,8 +67,9 @@ div#content4 {
     top:50px;
     left: 20px;
     right: 10px;
-    color: #6C6152;
+    color: #002E09;
 }
+
 
 div#footer {
     position: absolute;
@@ -102,11 +105,7 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-<<<<<<< HEAD
-    color: white;
-=======
     color: #fff;
->>>>>>> f0699aa57f8fe95fdc27b8b775b1956996b94064
     font-size: 15px;
     font-weight: bold;
 }
@@ -129,7 +128,7 @@ div#menu li  ul {
     display:inline-block;
     position:absolute;
     list-style:none;
-    background: #8a9969;
+    background: #002E09;
     z-index: 1;
     opacity: 0;
     text-align: center;
@@ -144,11 +143,7 @@ div#menu li:hover ul {
 /* LINK */
  /*#544A3D*/
 div#menu a:hover{
-<<<<<<< HEAD
-   color: white;
-=======
    color: #fff;
->>>>>>> f0699aa57f8fe95fdc27b8b775b1956996b94064
    font-weight: bold;
    background-color: #5b6642;
 }
@@ -172,17 +167,29 @@ table {
     border-collapse: collapse;
 }
 
+table td,th{
+  padding:20px 30px;
+  text-align: center;
+}
 td, th {
     line-height: 18px;
     border-bottom: 1px solid #eee;
     vertical-align: top;
-    padding: 5px 15px;
+    text-align: center;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 table.change-list, table.change-list th, table.change-list td {
     border: 1px solid #ccc;
+    text-align: center;
   }
 div h1{
   font-weight: bold;
+}
+div#content a:link, a:visited {
+    position: relative;
+    top:0px;
+    left: 20px;
+    right: 10px;
+    color: #6C6152;
 }

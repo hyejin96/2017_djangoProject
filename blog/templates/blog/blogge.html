@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}게시글형태의 블로그{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>게시글</h1>
+
+    <table class="change-list">
+        <tr>
+          <th>타이틀</th>
+          <th>요약</th>
+          <th>작성자</th>
+        </tr>
+
+        {% for item in object_list %}
+        <tr>
+          <td>{{ item.title }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.owner }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

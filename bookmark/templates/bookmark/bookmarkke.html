@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}게시글 형태의 즐겨찾기{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>즐겨찾기</h1>
+
+    <table class="change-list">
+        <tr>
+        <th>타이틀</th>
+        <th>주소</th>
+        </tr>
+
+        {% for item in object_list %}
+        <tr>
+        <td>{{ item.title }}</td>
+        <td><a href = "item.url">{{ item.url }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
