@@ -13,6 +13,9 @@ div#homeimg {
     top:-10px;
 
 }
+div#homeimg img{
+  height:50px;
+}
 
 .ti {
   position:  relative;

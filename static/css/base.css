@@ -43,7 +43,7 @@ div#content {
     top:50px;
     left: 20px;
     right: 50px;
-    color: #002E09;
+    color: #E8D6D2;
 }
 
 div#content1 {
@@ -51,7 +51,7 @@ div#content1 {
     top:70px;
     left: 20px;
     right: 50px;
-    color: #002E09;
+    color: #E8D6D2;
 }
 
 div#content3 {
@@ -59,7 +59,7 @@ div#content3 {
     top:50px;
     left: 20px;
     right: 50px;
-    color: #002E09;
+    color: #E8D6D2;
 }
 
 div#content4 {
@@ -67,7 +67,7 @@ div#content4 {
     top:50px;
     left: 20px;
     right: 10px;
-    color: #002E09;
+    color: #E8D6D2;
 }
 
 
@@ -92,7 +92,7 @@ div#footer {
   vertical-align: middle;
   text-align: right;
   padding-right: 20px;
-  color: #ffc;
+  color: #E8D6D2;
   font-weight: normal;
   font-size: 12px;
 }
@@ -105,7 +105,7 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #fff;
+    color: #E8D6D2;
     font-size: 15px;
     font-weight: bold;
 }
@@ -143,18 +143,18 @@ div#menu li:hover ul {
 /* LINK */
  /*#544A3D*/
 div#menu a:hover{
-   color: #fff;
+   color: #E8D6D2;
    font-weight: bold;
    background-color: #5b6642;
 }
 
 #applist>a:link, a:visited {
-    color: #8B7A65;
+    color: #E8D6D2;
     text-decoration: none;
 }
 
 a:link, a:visited {
-    color: #fff;
+    color: #E8D6D2;
     text-decoration: none;
 }
 
@@ -191,5 +191,5 @@ div#content a:link, a:visited {
     top:0px;
     left: 20px;
     right: 10px;
-    color: #6C6152;
+    color: #E8D6D2;
 }
