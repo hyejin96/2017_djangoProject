@@ -1,46 +1,48 @@
-"""mysite URL Configuration
+"""mysite path Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.9/topics/http/urls/
+The `pathpatterns` list routes paths to views. For more information please see:
+    https://docs.djangoproject.com/en/1.9/topics/http/paths/
 Examples:
 Function views
     1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+    2. Add a path to pathpatterns:  path('', views.home, name='home')
 Class-based views
     1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Add an import:  from blog import urls as blog_urls
-    2. Import the include() function: from django.conf.urls import url, include
-    3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
+    2. Add a path to pathpatterns:  path('', Home.as_view(), name='home')
+Including another pathconf
+    1. Add an import:  from blog import paths as blog_paths
+    2. Import the include() function: from django.conf.paths import path, include
+    3. Add a path to pathpatterns:  path('blog/', include(blog_paths))
 """
-from django.conf.urls import url
 from bookmark.views import *
+from . import views
+from django.urls import path
 
+app_name = 'bookmark'
 urlpatterns = [
-    url(r'^$', BookmarkLV.as_view(), name='index'),
+    path('', BookmarkLV.as_view(), name='index'),
 
-    url(r'^bookmark2/$', BookmarkLV2.as_view(), name='index2'),
+    path('bookmark2/', BookmarkLV2.as_view(), name='index2'),
 
-    url(r'^(?P<pk>\d+)/$', BookmarkDV.as_view(), name='detail'),
+    path('(?P<pk>\d+)/', BookmarkDV.as_view(), name='detail'),
 
     # Example: /add/
-    url(r'^add/$',
+    path('add/',
         BookmarkCreateView.as_view(), name="add",
     ),
 
     # Example: /change/
-    url(r'^change/$',
+    path('change/',
         BookmarkChangeLV.as_view(), name="change",
     ),
 
     # Example: /99/update/
-    url(r'^(?P<pk>[0-9]+)/update/$',
+    path('(?P<pk>[0-9]+)/update/',
         BookmarkUpdateView.as_view(), name="update",
     ),
 
     # Example: /99/delete/
-    url(r'^(?P<pk>[0-9]+)/delete/$',
+    path('(?P<pk>[0-9]+)/delete/',
         BookmarkDeleteView.as_view(), name="delete",
     ),
 ]

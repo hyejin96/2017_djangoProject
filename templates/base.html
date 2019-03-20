@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-  <title>{% block title %}5조와 함께 떠나는 장고 여행{% endblock %}</title>
+  <title>{% block title %}Django's Day{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% load staticfiles %}
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
   <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
   <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
@@ -27,7 +25,7 @@
   <body>
 
 <div id="header">
-	<h2 class="maintitle">  <a href="{% url 'home' %}" style="color:white">5조와 함께 떠나는 장고 여행</a></h2>
+	<h2 class="maintitle">  <a href="{% url 'home' %}" style="color:white">Django's Day</a></h2>
     {% if user.is_active %}
     <h4 class="welcome">어서오세요.
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>
@@ -54,7 +52,7 @@
   					<span class="icon-bar"></span>
   					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">5조</a>
+				<a href="#" class="navbar-brand">Django's Day</a>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -134,11 +132,5 @@
 
     {% block content %}{% endblock %}
     {% block footer %}{% endblock %}
-
-	<!-- HTML5와 미디어쿼리를 지원하지 않는 IE8 이하 버전을 위해 -->
-	<!-- [if lt IE 9]>
-		<script src="html5shiv/html5shiv.min.js">
-		<script src="respond/respond.min.js">
-	<![endif]-->
   </body>
 </html>

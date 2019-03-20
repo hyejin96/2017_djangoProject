@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}polls_form.html{% endblock %}
+{% block title %}polls_form{% endblock %}
 
 {% load staticfiles %}
 {% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
@@ -23,6 +23,16 @@
         <div class="form-row">
             {{ form.question_text.label_tag }} {{ form.question_text }}
         </div>
+
+        <div class="form-row">
+            {{ form.Date_information.label_tag }} {{ form.Date_information }}
+        </div>
+
+
+        <div class="form-row">
+            {{ form.was_published_recently.label_tag }} {{ form.was_published_recently }}
+        </div>
+
 
 
     </fieldset>

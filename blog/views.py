@@ -12,7 +12,9 @@ from django.db.models import Q
 from django.shortcuts import render
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse_lazy
+# from django.core.urlresolvers import reverse_lazy
+from django.urls.base import reverse_lazy #reverse_lazy를 선언 
+
 from mysite.views import LoginRequiredMixin
 
 # Create your views here.

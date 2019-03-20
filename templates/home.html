@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}5조{% endblock %}
+{% block title %}Django's Day{% endblock %}
 
 {% load staticfiles %}
 {% block extrastyle %}{% static "css/home.css" %}{% endblock %}
@@ -11,45 +11,13 @@
 <div id="content_home">
 
     <div id="homeimg">
-        <a href="/"><img src="{% static 'img/aaa.gif' %}"  style="height: 555px;" /></a>
-
+        <a href="/"><img src="/static/img/aaa.gif" style="width: auto;height: 555px;display: block;margin-left: auto;margin-right: auto;"></a>
     </div>
-
-    <!-- <hr style="margin: 5px 0;"> -->
-    <!-- <div class="ti">
-    <h2>어떤 것을 보시겠어요?</h2>
-    <div class = "cen">
-    <table id="applist">
-        <tr>
-        <td><b><i><a href="{% url 'bookmark:index' %}">JHJ가 즐겨찾는 사이트</a></i><b></td>
-        <td>JHJ가 자주 들어가는 사이트를 볼 준비가 되셨습니까~(기대)</td>
-        </tr>
-
-        <tr>
-        <td><b><i><a href="{% url 'blog:index' %}">JHJ의 일지</a></i><b></td>
-        <td>JHJ의 하루하루의 기록을 보실 준비가 되셨습니까~(궁금)</td>
-        </tr>
-
-        <tr>
-        <td><b><i><a href="{% url 'polls:index' %}">JHJ가 만든 투표</a></i><b></td>
-        <td>JHJ의 투표는 어떤 것이 있을까요~?</td>
-        </tr>
-
-        <tr>
-        <td><b><i><a href="{% url 'photo:index' %}">JHJ만의 앨범</a></i><b></td>
-        <td>JHJ의 앨범을 보실 준비가 되셨습니까~(두근두근)</td>
-        </tr>
-
-
-
-    </table>
-  </div>
-</div> -->
 </div>
 {% endblock content %}
 
 {% block footer %}
 <div id="footer">
-    &copy; jhj 2017
+    &copy; Django's Day 2017
 </div>
 {% endblock footer %}

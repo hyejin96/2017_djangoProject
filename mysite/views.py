@@ -2,7 +2,8 @@ from django.views.generic.base import TemplateView
 
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
-from django.core.urlresolvers import reverse_lazy
+# from django.core.urlresolvers import reverse_lazy
+from django.urls.base import reverse_lazy #reverse_lazy를 선언 
 
 from django.contrib.auth.decorators import login_required
 

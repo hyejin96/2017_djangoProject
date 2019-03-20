@@ -2,7 +2,9 @@ from django.views.generic import ListView, DetailView
 from photo.models import Album, Photo
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse_lazy
+# from django.core.urlresolvers import reverse_lazy
+from django.urls.base import reverse_lazy #reverse_lazy를 선언 
+
 from mysite.views import LoginRequiredMixin
 
 # Create your views here.

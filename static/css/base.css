@@ -40,7 +40,7 @@ div#menu {
 
 div#content {
     position: absolute;
-    top:50px;
+    top: 12%;
     left: 20px;
     right: 50px;
     color: #E8D6D2;
@@ -63,7 +63,7 @@ div#content3 {
 }
 
 div#content4 {
-    position: relative;
+    position: absolute;
     top:50px;
     left: 20px;
     right: 10px;
@@ -85,6 +85,7 @@ div#footer {
     padding-left: 20px;
     font-weight: bold;
     font-size: 25px;
+    display: inline-block;
 }
 
 .welcome {
@@ -95,6 +96,7 @@ div#footer {
   color: #E8D6D2;
   font-weight: normal;
   font-size: 12px;
+  /*display: inline;*/
 }
 
 

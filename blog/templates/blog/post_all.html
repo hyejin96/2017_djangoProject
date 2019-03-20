@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}post_all.html{% endblock %}
+{% block title %}게시글 목록{% endblock %}
 
 {% block content %}
 <div id="content">
 
-<h1>블로그 리스트</h1>
+<h1>게시글 목록</h1>
 
 {% for post in posts %}
     <h2><a href='{{ post.get_absolute_url }}'>{{ post.title }}</a></h2>
